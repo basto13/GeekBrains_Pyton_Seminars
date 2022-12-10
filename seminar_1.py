@@ -55,7 +55,7 @@ findCoordinates(x,y)
 print("insert number of quarter:")
 quarter = int(input())
 
-def range(quarter):
+def findQuarter(quarter):
     if quarter == 1:
         print("range is x > 0, y > 0 for 1 quarter")
     elif quarter == 2:
@@ -65,7 +65,7 @@ def range(quarter):
     else:
         print("range is x < 0 and y > 0 for 4 quarter") 
 
-range(quarter)
+findQuarter(quarter)
 
 # 5. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
 # Пример:
@@ -84,7 +84,7 @@ def setCoordinates():
     return coordinates
 
 def findDistance(a, b):
-    distance = round(((b[0] - a[0]) **2 + (b[1] - a[1] ** 2)) ** (0.5), 2)
+    distance = round(((b[0] - a[0]) **2 + (b[1] - a[1]) ** 2) ** 0.5, 2)
     return distance
 
 print("insert coordinates of A")
