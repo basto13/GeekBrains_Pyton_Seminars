@@ -27,9 +27,15 @@
 # # Пример:
 # # - Для n = 6: {1: 4, 2: 7, 3: 10, 4: 13, 5: 16, 6: 19}
 
-# n = 3
-# d = {i : ((1+1/i)**i) for i in range(1, n + 1)}
-# print("list of results: {}" .format(d))
+n = 3
+d = {i : ((1+1/i)**i) for i in range(1, n + 1)}
+print("list of results: {}" .format(d))
+values = d.values()
+print(values)
+sum = 1
+for e in values:
+    sum *= e
+print("sum is {}" .format(sum))
 
 
 # 4. Задайте список из N элементов, заполненных числами из промежутка [-N, N]. 
