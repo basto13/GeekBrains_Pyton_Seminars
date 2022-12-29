@@ -10,6 +10,23 @@
 #     sum += int(i)
 # print('sum is ', sum)
 
+# Improvements of previous homework
+# 1. Напишите программу, которая принимает на вход вещественное число и показывает сумму его цифр.
+# Пример:
+# - 6782 -> 23
+# - 0,56 -> 11
+
+def sum(number, sum):
+    return sum + number
+
+a = 0.56
+s = str(a).replace('.', '')
+s = list(lambda x: x in s)
+total = 0
+total = map(sum, s)
+print(type(total))
+print('total is ', total)
+
 # 2. Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
 # Пример:
 # - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
