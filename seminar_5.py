@@ -3,8 +3,8 @@
 
 # 1. Напишите программу, удаляющую из текста все слова, содержащие ""abc"".
 
-# text = ('History about abc. A and B are included in abc')
-# print('Initial text: {}'. format(text))
+text = ('History about abc. A and B are included in abc')
+print('Initial text: {}'. format(text))
 
 # # 11111111111 1st colution 
 
@@ -14,9 +14,10 @@
 
 # # !!!!!!!! 2d solution
 
-# result = text.split()
-# result = filter(lambda x: 'abc' not in x, result)
-# print(*result)
+result = text.split()
+print(result)
+result = filter(lambda x: 'abc' not in x, result)
+print(*result)
 
 
 
