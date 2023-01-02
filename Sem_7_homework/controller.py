@@ -13,7 +13,7 @@ def controller():
         position = ui()
         data = readData()
         if position == 1:
-            print("1: input new data")
+            print("1: add new contact")
             addData(data)
         if position == 2:
                 print("2: find data")
@@ -28,4 +28,4 @@ def controller():
                 print("5: print data")
                 print(data)
     else:
-        print("end of work")
+        print("End of work")
