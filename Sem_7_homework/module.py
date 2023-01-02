@@ -37,3 +37,19 @@ def findContact(data):
         else:
             print("There is no such contact.")
 
+# # export data
+# def exportData(data):
+#     dataFormat = open("data.csv", "w", encoding='utf-8')
+#     dataFormat.write("LastName;FirstName;FatherName;Number\n")
+#     for line in data:
+        
+# import file with data
+def importData(data):
+    newData = open("file_to_import_data", "r", encoding='utf-8')
+    lines = newData.readlines()
+    for line in lines:
+        if line != "":
+            data.append(line.replace("\n", "").split(" "))
+
+    rewriteData(data)
+    print(data)
