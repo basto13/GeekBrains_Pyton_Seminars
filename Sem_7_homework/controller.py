@@ -3,6 +3,7 @@ from module import readData
 from module import addData
 from module import findContact
 from module import importData
+from module import exportData
 
 
 def controller():
@@ -22,6 +23,7 @@ def controller():
                 importData(data)
         if position == 4:
                 print("4: export data")
+                exportData(data)
         if position == 5:
                 print("5: print data")
                 print(data)
