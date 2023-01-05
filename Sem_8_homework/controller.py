@@ -6,6 +6,7 @@ from module import addNewEmployee
 from module import deleteEmployee
 from module import updateInfo
 from module import exportData
+from module import exportDataJson
 
 def controller():
     position = -1
@@ -32,6 +33,7 @@ def controller():
             updateInfo(data)
         if position == 7:
             print("7: Export data into json")
+            exportDataJson(data)
         if position == 8:
             print("8: Export data into csv")
             exportData(data)

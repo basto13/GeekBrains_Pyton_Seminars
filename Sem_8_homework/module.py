@@ -1,4 +1,6 @@
 
+import json
+
 # read database from "txt" file
 def readData():
     employees = []
@@ -104,6 +106,13 @@ def exportData(data):
         dataFormat.write(";".join(lineToAdd) + "\n")
     dataFormat.close()
     return dataFormat
+
+def exportDataJson(data):
+# Serializing json
+    json_object = json.dumps(data, indent=4)
+# Writing to sample.json
+    with open("data.json", "w") as outfile:
+        outfile.write(json_object)
 
 
    
