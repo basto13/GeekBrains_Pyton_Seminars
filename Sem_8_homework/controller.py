@@ -3,6 +3,7 @@ from module import readData
 from module import findEmployee
 from module import salarySelection
 from module import addNewEmployee
+from module import deleteEmployee
 
 def controller():
     position = -1
@@ -23,6 +24,7 @@ def controller():
             addNewEmployee(data)
         if position == 5:
             print("5: Delete employee")
+            deleteEmployee(data)
         if position == 6:
             print("6: Update the info about employee")      
         if position == 7:

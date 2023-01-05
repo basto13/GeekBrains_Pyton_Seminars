@@ -22,7 +22,6 @@ def rewriteData(data):
     db_file = open("data.txt", "w", encoding='utf-8')
     print("data in rewrite: ", data)
     for line in data:
-        print("line is: ", line)
         lineToAdd = []
         lineToAdd.append(str(line["id"]))
         lineToAdd.append(line["last_name"])
@@ -39,6 +38,7 @@ def findEmployee(data):
     for person in data:
         if search == person["last_name"] or search == person["position"]:
             print(person)
+            return person
 
 # select by salary range function
 def salarySelection(data):
@@ -65,9 +65,16 @@ def addNewEmployee(data):
     newEmp["phone_number"] = input("add phone number: ").strip()
     newEmp["salary"] = int(input("add salary: "))
     data.append(newEmp)
-    print("newEmp is: ", newEmp)
-    print("data in add func", data)
     rewriteData(data)
+
+def deleteEmployee(data):
+    person = findEmployee(data)
+    approval = str(input("Write yes if you want to delete the employee: "))
+    if approval == "yes":
+        data.remove(person)
+        print("Employee is deleted")
+        rewriteData(data)
+    return data
 
 
    
