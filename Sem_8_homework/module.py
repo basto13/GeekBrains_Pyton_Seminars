@@ -88,5 +88,22 @@ def updateInfo(data):
     rewriteData(data)
     return data
 
+# export data to 'data.csv' file
+def exportData(data):
+    dataFormat = open("data.csv", "w", encoding='utf-8')
+    dataFormat.write("Last_name;First_name;Position;Number;Salary\n")
+    for line in data:
+        print("line is: ", line)
+        lineToAdd = []
+        lineToAdd.append(str(line["id"]))
+        lineToAdd.append(line["last_name"])
+        lineToAdd.append(line["first_name"])
+        lineToAdd.append(line["position"]) 
+        lineToAdd.append(line["phone_number"])
+        lineToAdd.append(str(line["salary"])) 
+        dataFormat.write(";".join(lineToAdd) + "\n")
+    dataFormat.close()
+    return dataFormat
+
 
    
