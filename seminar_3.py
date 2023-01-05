@@ -3,12 +3,14 @@
 # Пример:
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
-# a = [2, 3, 5, 9, 3]
+a = [2, 3, 5, 9, 3]
 # sum = 0
 # for idx, x in enumerate(a):
 #     if idx % 2:
 #         sum += x
 # print(sum)
+
+print(sum([i for i in a if i % 2 == 0]))
 
 
 # 2. Напишите программу, которая найдёт произведение пар чисел списка. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
@@ -52,21 +54,21 @@
 # Пример:
 # - для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 
-positiveFibList = []
-def fib(n, is_positive):
-    if n in {0, 1}:
-        return n
-    if is_positive:
-        return fib(n - 2, is_positive) + fib(n - 1, is_positive)
-    else:
-        return fib(n - 2, is_positive) - fib(n - 1, is_positive)
+# positiveFibList = []
+# def fib(n, is_positive):
+#     if n in {0, 1}:
+#         return n
+#     if is_positive:
+#         return fib(n - 2, is_positive) + fib(n - 1, is_positive)
+#     else:
+#         return fib(n - 2, is_positive) - fib(n - 1, is_positive)
 
-positiveFibList = [fib(n, True) for n in range(10)]
-print('positive list ', positiveFibList)
-negativeFibList = [fib(n, False) for n in range(10)]
-print('negative list ', negativeFibList)
+# positiveFibList = [fib(n, True) for n in range(10)]
+# print('positive list ', positiveFibList)
+# negativeFibList = [fib(n, False) for n in range(10)]
+# print('negative list ', negativeFibList)
 
-negativeFibList.pop(0)
-negativeFibList.reverse()
-negativeFibList.extend(positiveFibList)
-print('result is ', negativeFibList)
+# negativeFibList.pop(0)
+# negativeFibList.reverse()
+# negativeFibList.extend(positiveFibList)
+# print('result is ', negativeFibList)

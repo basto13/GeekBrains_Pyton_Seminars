@@ -16,16 +16,23 @@
 # - 6782 -> 23
 # - 0,56 -> 11
 
-def sum(number, sum):
-    return sum + number
+# def sum(number, sum):
+#     return sum + number
 
-a = 0.56
-s = str(a).replace('.', '')
-s = list(lambda x: x in s)
-total = 0
-total = map(sum, s)
-print(type(total))
-print('total is ', total)
+# a = 0.56
+# s = str(a).replace('.', '')
+# s = list(lambda x: x in s)
+# total = 0
+# total = map(sum, s)
+# print(type(total))
+# print('total is ', total)
+
+# c = float(input("Insert a number: "))
+# lst = sum(map(int, str(c).replace(".", "").replace("-", "")))
+# print(lst)
+
+# print(sum(map(int, (filter(str.isdigit, input("Insert the number: "))))))
+
 
 # 2. Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
 # Пример:
@@ -44,15 +51,15 @@ print('total is ', total)
 # # Пример:
 # # - Для n = 6: {1: 4, 2: 7, 3: 10, 4: 13, 5: 16, 6: 19}
 
-n = 3
-d = {i : ((1+1/i)**i) for i in range(1, n + 1)}
-print("list of results: {}" .format(d))
-values = d.values()
-print(values)
-sum = 1
-for e in values:
-    sum *= e
-print("sum is {}" .format(sum))
+# n = 3
+# d = {i : ((1+1/i)**i) for i in range(1, n + 1)}
+# print("list of results: {}" .format(d))
+# values = d.values()
+# print(values)
+# sum = 1
+# for e in values:
+#     sum *= e
+# print("sum is {}" .format(sum))
 
 
 # 4. Задайте список из N элементов, заполненных числами из промежутка [-N, N]. 
