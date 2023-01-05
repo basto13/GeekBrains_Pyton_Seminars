@@ -18,6 +18,21 @@ def readData():
     print(employees)
     return employees
 
+def rewriteData(data):
+    db_file = open("data.txt", "w", encoding='utf-8')
+    print("data in rewrite: ", data)
+    for line in data:
+        print("line is: ", line)
+        lineToAdd = []
+        lineToAdd.append(str(line["id"]))
+        lineToAdd.append(line["last_name"])
+        lineToAdd.append(line["first_name"])
+        lineToAdd.append(line["position"]) 
+        lineToAdd.append(line["phone_number"])
+        lineToAdd.append(str(line["salary"])) 
+        db_file.write(" ".join(lineToAdd)+"\n")
+    return data
+
 # search employee by name or position:
 def findEmployee(data):
     search = str(input("Input last name or position for search: "))
@@ -41,9 +56,18 @@ def salarySelection(data):
     return list
 
 # add new person
-def addNewEmployee():
-
-    print(list)
+def addNewEmployee(data):
+    newEmp = {}
+    newEmp["id"] = (data[-1]["id"] + 1)
+    newEmp["last_name"] = input("add last name: ").strip()
+    newEmp["first_name"] = input("add first name: ").strip()
+    newEmp["position"] = input("add position: ").strip()
+    newEmp["phone_number"] = input("add phone number: ").strip()
+    newEmp["salary"] = int(input("add salary: "))
+    data.append(newEmp)
+    print("newEmp is: ", newEmp)
+    print("data in add func", data)
+    rewriteData(data)
 
 
    
