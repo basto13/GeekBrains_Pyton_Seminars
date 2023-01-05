@@ -1,6 +1,8 @@
 from view import ui as ui
 from module import readData
 from module import findEmployee
+from module import salarySelection
+from module import addNewEmployee
 
 def controller():
     position = -1
@@ -8,13 +10,17 @@ def controller():
         position = ui()
         data = readData()
         if position == 1:
+            print("Search by last name:")
             findEmployee(data)
         if position == 2:
-            print("2: Select by position")
+            print("Search by position:")
+            findEmployee(data)
         if position == 3:
-            print("3: Select by salary range")
+            print("3: Select by salary rate. Input the salary amount for search: ")
+            salarySelection(data)
         if position == 4:
             print("4: Add a new employee")
+            addNewEmployee(data)
         if position == 5:
             print("5: Delete employee")
         if position == 6:

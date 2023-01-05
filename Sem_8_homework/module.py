@@ -18,7 +18,32 @@ def readData():
     print(employees)
     return employees
 
-# find employee by name:
+# search employee by name or position:
 def findEmployee(data):
-    print(data)
-    # print(data[0]["position"])
+    search = str(input("Input last name or position for search: "))
+    for person in data:
+        if search == person["last_name"] or search == person["position"]:
+            print(person)
+
+# select by salary range function
+def salarySelection(data):
+    search = int(input("insert the approximate salary to search: "))
+    list = []
+    minDist = 1000000
+    for person in data:
+        tempDist = abs(search - person["salary"])
+        if minDist > tempDist:
+            minDist = tempDist
+    for person in data:
+        if minDist >= (abs(search - person["salary"])):
+            list.append(person)
+    print(list)
+    return list
+
+# add new person
+def addNewEmployee():
+
+    print(list)
+
+
+   
