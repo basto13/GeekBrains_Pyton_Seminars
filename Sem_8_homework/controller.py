@@ -4,6 +4,7 @@ from module import findEmployee
 from module import salarySelection
 from module import addNewEmployee
 from module import deleteEmployee
+from module import updateInfo
 
 def controller():
     position = -1
@@ -26,7 +27,8 @@ def controller():
             print("5: Delete employee")
             deleteEmployee(data)
         if position == 6:
-            print("6: Update the info about employee")      
+            print("6: Update the info about employee")  
+            updateInfo(data)
         if position == 7:
             print("7: Export data into json")
         if position == 8:

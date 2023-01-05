@@ -76,5 +76,17 @@ def deleteEmployee(data):
         rewriteData(data)
     return data
 
+def updateInfo(data):
+    person = findEmployee(data)
+    change = str(input("What would you like to change? (choose an option: last name, first name, position, phone, salary): ").replace(" ", "_"))
+    print(change)
+    if change != "salary":
+        person[change] = input("change to: ").strip()
+    else:
+        person[change] = int(input("change to: "))
+    print("new personal info: ", person)
+    rewriteData(data)
+    return data
+
 
    
