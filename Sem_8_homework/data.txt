@@ -1,0 +1,5 @@
+1 Ivanov Ivan director +700000000000 100000
+2 Petrov Petr secretary +711111111111 35000
+3 Sidorov Sidor programmer +72222222222 70000
+4 Fedorov Fedor programmer +744444444 70000
+5 Viktorov Viktor accountant +799999999 60000

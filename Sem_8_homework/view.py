@@ -1,4 +1,4 @@
-def user_ui():
+def ui():
     print("Employees' list.")
     print("1: Find an employee")
     print("2: Select by position")
